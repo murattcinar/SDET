@@ -153,31 +153,6 @@ public class Main {
 
         System.out.println("Sonuç : " + result);
     }
-
-    /*
-     *
-     * Fiş kısmı için bir method oluşturun
-     *
-     * method ismi fisBas(), fisCikar() şeklinde isimlendirebilirsiniz
-     *
-     * methodun çıktısı ==> 1 Kilo Elma: 3.67 TL
-     *                      2 Kilo Armut: 4.28 TL
-     *                      Toplam Tutar: 7.95 TL
-     *
-     * şeklinde alınan ürününün kilosu, ismi ve tutarı olacak
-     *
-     * aynı şekilde KDV hesaplayan bir method daha yazarak, toplam tutar ve KDV'li tutarını hesaplayarak
-     * Fişte gösteriniz. KDV oranını 0.20 olarak sabit değişken atayın.
-     *
-     * En son fiş çıktısı
-     *
-     * 1 Kilo Elma: 3.67 TL
-     * 2 Kilo Armut: 4.28 TL
-     * Toplam Tutar: KDV dahil 9.54 TL, KDV: %20
-     *
-     *
-     **/
-
 }
 
 
