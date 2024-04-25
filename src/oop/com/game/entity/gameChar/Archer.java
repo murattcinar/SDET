@@ -1,0 +1,7 @@
+package oop.com.game.entity.gameChar;
+
+public class Archer extends GameChar {
+    public Archer() {
+        super(2,"Okçu",7,18,20);
+    }
+}
