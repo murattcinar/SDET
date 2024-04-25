@@ -4,21 +4,16 @@ import oop.com.game.entity.gameChar.GameChar;
 import oop.com.game.entity.gameChar.Archer;
 import oop.com.game.entity.gameChar.Knight;
 import oop.com.game.entity.gameChar.Samurai;
-import oop.com.game.entity.location.Location;
-import oop.com.game.entity.location.NormalLoc;
-import oop.com.game.entity.location.SafeHouse;
-import oop.com.game.entity.location.ToolStore;
 
 import java.util.Scanner;
 
 public class Player {
-    private int id;
     private int damage;
     private int health;
     private double money;
     private String playerName;
     private String charName;
-    private String locationName;
+
 
     private Scanner input = new Scanner(System.in);
 
@@ -66,45 +61,7 @@ public class Player {
     }
 
 
-    public void selectLoc(){
-        NormalLoc[] locList = {new SafeHouse(this,this.id,locationName), new ToolStore(this,this.id,locationName)};
-        System.out.println("----------------------------------------" +
-                "\nBölgeler");
 
-        for (NormalLoc normalLoc : locList) {
-            System.out.println("ID: " + normalLoc.getId() +
-                    " " + normalLoc.getName());
-        }
-        System.out.print("Gitmek istediğiz bölgeyi seçiniz: ");
-
-        byte selectLoc = input.nextByte();
-        switch (selectLoc) {
-            case 1:
-                initLocation(new SafeHouse(this,this.id,locationName));
-                break;
-            case 2:
-                initLocation(new ToolStore(this,this.id,locationName));
-                break;
-            default:
-                initLocation(new SafeHouse(this,this.id,locationName));
-        }
-
-    }
-
-    public void initLocation(NormalLoc normalLoc) {
-        this.setId(normalLoc.getId());
-        this.setLocationName(normalLoc.getName());
-        normalLoc.onLocation();
-    }
-
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public int getDamage() {
         return damage;
@@ -146,11 +103,4 @@ public class Player {
         this.charName = charName;
     }
 
-    public String getLocationName() {
-        return locationName;
-    }
-
-    public void setLocationName(String locationName) {
-        this.locationName = locationName;
-    }
 }
