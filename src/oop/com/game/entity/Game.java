@@ -17,9 +17,7 @@ public class Game {
                 "\nLütfen bir karakter seçiniz...");
 
         player.selectChar();
+        player.selectLoc();
 
-        while (true) {
-            player.selectLoc();
-        }
     }
 }
