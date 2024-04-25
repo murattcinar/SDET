@@ -3,8 +3,8 @@ package oop.com.game.entity.location;
 import oop.com.game.entity.Player;
 
 public class ToolStore extends NormalLoc {
-    public ToolStore(Player p,int id, String name) {
-        super(p,2, "Tool Store");
+    public ToolStore(Player p) {
+        super(p);
     }
 
     @Override
